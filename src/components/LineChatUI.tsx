@@ -1,16 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import Avatar from "./Avatar";
 import MessageBubble from "./MessageBubble";
 import TypingBubble from "./TypingBubble";
 import type { Message } from "../interfaces";
 
 export default function LineChatUI() {
-  const MOCK_REPLIES = [
-    "สวัสดีครับ! ขอบคุณที่ส่งข้อความมา ฉันพร้อมช่วยเหลือคุณเสมอ 😊",
-    "เข้าใจแล้วครับ ขอให้รอสักครู่ ฉันกำลังประมวลผลข้อมูลให้คุณ...",
-    "นี่คือการตอบกลับจาก AI Agent ของคุณ กรุณาเชื่อมต่อ API จริงในฟังก์ชัน callAPI() ครับ",
-    "ขอบคุณสำหรับคำถามครับ! ฉันยินดีช่วยเสมอ 🙌",
-  ];
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
