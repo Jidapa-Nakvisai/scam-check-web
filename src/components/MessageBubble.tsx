@@ -21,12 +21,13 @@ export default function MessageBubble({ msg }: { msg: Message }) {
     );
   }
 
+
   return (
     <div className="flex items-end gap-2 mb-3">
       <Avatar size="w-8 h-8" text="AI" />
       <div className="flex flex-col gap-1 max-w-xs">
         <span className="text-xs text-gray-500 pl-1 font-medium">AI</span>
-        <div className="bg-[#9EDDFF] text-white text-sm px-4 py-2.5 rounded-2xl leading-relaxed border border-black">
+        <div className="bg-[#9EDDFF] text-white text-sm px-4 py-2.5 rounded-2xl leading-relaxed border border-black whitespace-pre-line">
           {msg.text}
         </div>
         <span className="text-xs text-gray-400 pl-1">{time}</span>
